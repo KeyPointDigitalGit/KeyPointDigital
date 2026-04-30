@@ -1,0 +1,2 @@
+export default `*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}:root{--white: #ffffff;--bg-light: #f5f5f7;--bg-dark: #0d1b2e;--blue: #2d5fd4;--blue-mid: #4a72d9;--text-dark: #111111;--text-mid: #444;--text-muted: #666;--border: #e4e4e4;--font: "Inter", sans-serif}html{scroll-behavior:smooth}body{font-family:var(--font);background:var(--bg-light);color:var(--text-dark);line-height:1.6;overflow-x:hidden}
+`;

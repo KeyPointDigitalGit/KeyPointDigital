@@ -1,0 +1,10 @@
+{
+  "routes": {
+    "/KeyPointDigital": {},
+    "/KeyPointDigital/chi-siamo": {},
+    "/KeyPointDigital/clienti": {},
+    "/KeyPointDigital/contatti": {},
+    "/KeyPointDigital/privacy": {},
+    "/KeyPointDigital/servizi": {}
+  }
+}
