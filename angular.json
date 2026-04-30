@@ -64,12 +64,11 @@
               "sourceMap": true
             },
             "ghpages": {
-    "baseHref": "/NOME-REPO-GITHUB/",
-    "outputHashing": "all",
-    "optimization": true,
-    "buildOptimizer": true,
-    "aot": true
-  }
+              "baseHref": "/KeyPointDigital/",
+              "outputHashing": "all",
+              "optimization": true,
+              "aot": true
+}
           },
           "defaultConfiguration": "production"
         },
@@ -92,6 +91,9 @@
             "tsConfig": "tsconfig.spec.json",
             "runner": "vitest"
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
