@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from '../src/app/components/navbar/navbar.component';
-import { FooterComponent } from '../src/app/components/footer/footer.component';
-import { ChatWidgetComponent } from '../src/app/components/chat-widget/chat-widget.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ChatWidgetComponent } from './components/chat-widget/chat-widget.component';
 
 @Component({
   selector: 'app-root',
