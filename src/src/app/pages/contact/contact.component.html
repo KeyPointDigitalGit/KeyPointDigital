@@ -1,0 +1,80 @@
+<!-- FAQ SECTION -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="faq-left">
+      <div class="support-card">
+        <div class="support-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="28" height="28">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <h3>Hai ancora domande?</h3>
+        <p>Il nostro team è a disposizione per rispondere a ogni tuo dubbio.</p>
+        <div class="support-contacts">
+          <span>&#128222; +39 02 1234567</span>
+          <span>&#9993; info&#64;keypointdigital.it</span>
+        </div>
+      </div>
+    </div>
+    <div class="faq-right">
+      <h2 class="faq-title">Domande frequenti</h2>
+      <div class="faq-list">
+        @for (faq of faqs; track $index) {
+          <div class="faq-item" [class.open]="openIndex() === $index">
+            <button class="faq-q" (click)="toggle($index)">
+              {{ faq.q }}
+              <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a">
+              <p>{{ faq.a }}</p>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM SECTION -->
+<section class="contact-section">
+  <div class="contact-inner">
+    <div class="contact-header">
+      <h2>Contattaci</h2>
+      <p>Compila il modulo e ti risponderemo entro 24 ore.</p>
+    </div>
+    @if (submitted()) {
+      <div class="form-success">Messaggio inviato! Ti risponderemo presto.</div>
+    }
+    <form class="contact-form" (submit)="handleSubmit($event)">
+      <div class="form-grid">
+        <div class="field">
+          <label for="nome">Nome *</label>
+          <input id="nome" name="nome" type="text" placeholder="Il tuo nome" required>
+        </div>
+        <div class="field">
+          <label for="cognome">Cognome</label>
+          <input id="cognome" name="cognome" type="text" placeholder="Il tuo cognome">
+        </div>
+        <div class="field">
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" placeholder="la-tua&#64;email.com" required>
+        </div>
+        <div class="field">
+          <label for="telefono">Telefono</label>
+          <input id="telefono" name="telefono" type="tel" placeholder="+39 000 000 0000">
+        </div>
+        <div class="field full">
+          <label for="messaggio">Messaggio *</label>
+          <textarea id="messaggio" name="messaggio" rows="5" placeholder="Descrivi brevemente il tuo progetto o la tua richiesta..." required></textarea>
+        </div>
+        <div class="field full privacy-check">
+          <label>
+            <input type="checkbox" name="privacy" required>
+            Accetto il trattamento dei dati personali ai sensi del GDPR
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="btn-submit">Invia messaggio</button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,57 @@
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <h1>I clienti raccontano</h1>
+  <p>cosa pensano di noi i nostri clienti, ognuno unico e con le proprie esigenze</p>
+</div>
+
+<!-- CAROUSEL -->
+<div class="carousel-section">
+  <div class="carousel-wrap">
+    <div class="slides">
+      <div class="slide">
+        <div class="slide-img-wrap">
+          <img class="site-screenshot" [src]="slides[currentIndex()].img" [alt]="slides[currentIndex()].alt">
+          <div class="slide-img-label">
+            <h3>{{ slides[currentIndex()].title }}</h3>
+            <span>{{ slides[currentIndex()].subtitle }}</span>
+          </div>
+        </div>
+        <div class="slide-content">
+          <div class="slide-category">{{ slides[currentIndex()].category }}</div>
+          <div class="slide-tags">
+            @for (tag of slides[currentIndex()].tags; track tag) {
+              <span class="tag">{{ tag }}</span>
+            }
+          </div>
+          <div class="slide-quote">
+            <div class="quote-mark">"</div>
+            <p>{{ slides[currentIndex()].quote }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-controls">
+      <button class="arrow-btn" (click)="prev()" aria-label="Precedente">&#8592;</button>
+      <div class="dots">
+        @for (slide of slides; track $index) {
+          <div class="dot" [class.active]="$index === currentIndex()" (click)="goTo($index)"></div>
+        }
+      </div>
+      <button class="arrow-btn" (click)="next()" aria-label="Successivo">&#8594;</button>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <p class="cta-label">Inizia con noi</p>
+    <h2>Pronto a far crescere<br>la tua attività online?</h2>
+    <p>Unisciti ai nostri clienti e scopri come possiamo trasformare la tua presenza digitale in un vantaggio concreto per il tuo business.</p>
+    <div class="cta-btns">
+      <a routerLink="/contatti" class="btn-white">Inizia adesso</a>
+      <a routerLink="/contatti" class="btn-outline">Contattaci</a>
+    </div>
+  </div>
+</section>

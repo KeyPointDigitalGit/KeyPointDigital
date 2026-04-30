@@ -1,0 +1,47 @@
+.page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.hero { margin-bottom: 36px; }
+.hero h1 { font-size: clamp(28px, 4.5vw, 46px); font-weight: 800; line-height: 1.12; color: var(--text-dark, #111); margin-bottom: 10px; }
+.hero p { font-size: 14px; color: #555; max-width: 540px; line-height: 1.7; }
+
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+
+.card {
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 18px 24px;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.card.card-1-bg {
+  background-image: url("/images/fondo_quadretti.png");
+  background-size: cover;
+  background-position: center;
+}
+.card.highlight {
+  background: linear-gradient(150deg, #4a72d9 0%, #230e70 100%);
+  border-color: transparent;
+}
+.card.highlight h3 { color: #fff; }
+.card.highlight ul li { color: rgba(255,255,255,0.88); }
+.card.highlight ul li::before { background: rgba(255,255,255,0.6); }
+
+.card-icon { width: 80px; height: 80px; object-fit: contain; margin-bottom: 2px; }
+.card h3 { font-size: 13.5px; font-weight: 700; color: #111; }
+.card ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.card ul li { font-size: 12.5px; color: #555; display: flex; align-items: flex-start; gap: 7px; line-height: 1.5; }
+.card ul li::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: #999; margin-top: 5px; flex-shrink: 0; }
+
+@media (max-width: 680px) {
+  .page { padding: 28px 14px 60px; }
+  .grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 860px) and (min-width: 681px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
